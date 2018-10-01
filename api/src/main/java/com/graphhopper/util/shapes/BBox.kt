@@ -199,9 +199,9 @@ open class BBox @JvmOverloads constructor(
         if (other == null)
             return false
 
-        val b = other as BBox?
+        val b = other as BBox
         // equals within a very small range
-        return (NumHelper.equalsEps(minLat, b!!.minLat) && NumHelper.equalsEps(maxLat, b.maxLat)
+        return (NumHelper.equalsEps(minLat, b.minLat) && NumHelper.equalsEps(maxLat, b.maxLat)
             && NumHelper.equalsEps(minLon, b.minLon) && NumHelper.equalsEps(maxLon, b.maxLon))
     }
 
